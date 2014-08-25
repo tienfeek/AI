@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#fbe9e7">
+
+    <EditText
+        android:id="@+id/phone_et"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginLeft="40dip"
+        android:layout_marginRight="40dip"
+        android:layout_marginTop="100dip"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="5dip"
+        android:background="#ff5722"
+        android:textColorHint="#bdbdbd"
+        android:textColor="#FFFFFF"
+        android:hint="输入您电话号码"
+        android:phoneNumber="true" />
+
+
+    <EditText
+        android:id="@+id/password_et"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginLeft="40dip"
+        android:layout_marginRight="40dip"
+        android:layout_marginTop="20dip"
+        android:layout_below="@+id/phone_et"
+        android:paddingLeft="5dip"
+        android:background="#ff5722"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#bdbdbd"
+        android:hint="输入您密码"
+        android:password="true" />
+	<Button android:id="@+id/login_btn"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dip"
+	    android:layout_marginLeft="40dip"
+	    android:layout_marginTop="20dip"
+	    android:layout_marginRight="40dip"
+	    android:layout_below="@+id/password_et"
+	    android:background="@drawable/login_btn_selector"
+	    android:text="登          陆"
+	    android:textColor="#FFFFFF"
+	    android:textSize="20sp"/>
+	<Button android:id="@+id/regster_btn"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dip"
+	     android:layout_marginLeft="40dip"
+	    android:layout_marginTop="20dip"
+	    android:layout_marginRight="40dip"
+	    android:layout_below="@+id/login_btn"
+	    android:layout_centerHorizontal="true"
+	     android:background="@drawable/login_btn_selector"
+	    android:text="注         册"
+	    android:textColor="#FFFFFF"
+	    android:textSize="20sp"/>
+</RelativeLayout>

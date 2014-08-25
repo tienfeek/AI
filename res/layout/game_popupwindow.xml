@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="250dip" 
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/game_iv"
+        android:layout_width="120dip"
+        android:layout_height="120dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dip" 
+        android:layout_marginBottom="20dip"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_margin="15dip"
+        android:layout_alignParentBottom="true" 
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <com.tien.ai.view.FButton
+            android:id="@+id/play_btn"
+            android:layout_width="100dip"
+            android:layout_height="match_parent"
+            android:text="玩一把"
+            android:textColor="@android:color/white"
+            fbutton:buttonColor="@color/fbutton_color_alizarin"
+            fbutton:cornerRadius="10dp"
+            fbutton:shadowEnabled="true"
+            fbutton:shadowHeight="5dp" />
+
+        <com.tien.ai.view.FButton
+            android:id="@+id/send_btn"
+            android:layout_width="100dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:text="发给他"
+            android:textColor="@android:color/white"
+            fbutton:buttonColor="@color/fbutton_color_alizarin"
+            fbutton:cornerRadius="10dp"
+            fbutton:shadowEnabled="true"
+            fbutton:shadowHeight="5dp" 
+            android:visibility="gone"/>
+
+        <com.tien.ai.view.FButton
+            android:id="@+id/cancel_btn"
+            android:layout_width="100dip"
+            android:layout_height="match_parent"
+             android:layout_marginLeft="30dip"
+            android:text="不玩了"
+            android:textColor="@android:color/white"
+            fbutton:buttonColor="@color/fbutton_color_alizarin"
+            fbutton:cornerRadius="10dp"
+            fbutton:shadowEnabled="true"
+            fbutton:shadowHeight="5dp" />
+    </LinearLayout>
+
+</RelativeLayout>

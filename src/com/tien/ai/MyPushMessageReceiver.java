@@ -8,11 +8,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Context;
-import android.content.Intent;
 import android.text.TextUtils;
 import android.util.Log;
 
 import com.baidu.frontia.api.FrontiaPushMessageReceiver;
+import com.google.gson.Gson;
+import com.tien.ai.db.DBManager;
+import com.tien.ai.demain.Game;
+import com.tien.ai.utils.PreferenceUtils;
+import com.tien.ai.utils.XLog;
+import com.tien.ai.view.BulletinWindow;
 
 /**
  * Push消息处理receiver。请编写您需要的回调函数， 一般来说： onBind是必须的，用来处理startWork返回值；
@@ -40,6 +45,8 @@ public class MyPushMessageReceiver extends FrontiaPushMessageReceiver {
     /** TAG to Log */
     public static final String TAG = MyPushMessageReceiver.class
             .getSimpleName();
+    
+    
 
     /**
      * 调用PushManager.startWork后，sdk将对push
@@ -70,10 +77,9 @@ public class MyPushMessageReceiver extends FrontiaPushMessageReceiver {
 
         // 绑定成功，设置已绑定flag，可以有效的减少不必要的绑定请求
         if (errorCode == 0) {
-            Utils.setBind(context, true);
+            Utils.setBind(context, true, channelId, userId);
         }
-        // Demo更新界面展示代码，应用请在这里加入自己的处理逻辑
-        updateContent(context, responseString);
+       
     }
 
     /**
@@ -91,25 +97,53 @@ public class MyPushMessageReceiver extends FrontiaPushMessageReceiver {
             String customContentString) {
         String messageString = "透传消息 message=\"" + message
                 + "\" customContentString=" + customContentString;
-        Log.d(TAG, messageString);
+        Log.i(TAG, messageString);
+        
+//        ToastUtil.shortToast(message);
 
-        // 自定义内容获取方式，mykey和myvalue对应透传消息推送时自定义内容中设置的键和值
-        if (!TextUtils.isEmpty(customContentString)) {
-            JSONObject customJson = null;
+        if (!TextUtils.isEmpty(message)) {
+            JSONObject json = null;
             try {
-                customJson = new JSONObject(customContentString);
-                String myvalue = null;
-                if (customJson.isNull("mykey")) {
-                    myvalue = customJson.getString("mykey");
+                json = new JSONObject(message);
+                int code = 0;
+                if (!json.isNull("code")) {
+                    code = json.getInt("code");
+                    if(code == 1){
+                        String toUid = json.optString("to_uid");
+                        if(toUid.equals(PreferenceUtils.loadUid())){
+                            
+                            String fromUid = json.optString("from_uid");
+                            String fromNickname = json.optString("from_nickname");
+                            
+                            BulletinWindow.getInstance().addBulletin(fromNickname, fromUid);
+                            DBManager.getInstance().add(fromUid, fromNickname, 1);
+                            NotificationCenter.defaultCenter().postNotification(new NotificationItem(NotificationItem.TYPE_RECEIVE_AI, ""));
+                        }
+                    }else if(code == 2){
+                        NotificationCenter.defaultCenter().postNotification(new NotificationItem(NotificationItem.TYPE_ADD_FRIEND, ""));
+                    }else if(code == 3){
+                        String uid = json.optString("from_uid");
+                        DBManager.getInstance().insertRemind(uid, 1);
+                        NotificationCenter.defaultCenter().postNotification(new NotificationItem(NotificationItem.TYPE_MODIFY_USERINFO, uid));
+                    //游戏    
+                    }else if(code == 4){
+                        //String uid = json.optString("from_uid");
+                        JSONObject data = json.optJSONObject("data");
+                        Gson gson = new Gson();
+                        XLog.i("wanges","game receive "+data.toString());
+                        Game game = gson.fromJson(data.toString(), Game.class);
+                        XLog.i("wanges","game receive game"+game.toString());
+                        game.setStatus(1);
+                        DBManager.getInstance().insertGame(game);
+                        NotificationCenter.defaultCenter().postNotification(new NotificationItem(NotificationItem.TYPE_GAME, new String[]{game.getFromUid(), game.getGameSequence()}));
+                    }
                 }
             } catch (JSONException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
 
-        // Demo更新界面展示代码，应用请在这里加入自己的处理逻辑
-        updateContent(context, messageString);
+        
     }
 
     /**
@@ -243,7 +277,7 @@ public class MyPushMessageReceiver extends FrontiaPushMessageReceiver {
 
         // 解绑定成功，设置未绑定flag，
         if (errorCode == 0) {
-            Utils.setBind(context, false);
+            Utils.setBind(context, false, "", "");
         }
         // Demo更新界面展示代码，应用请在这里加入自己的处理逻辑
         updateContent(context, responseString);
@@ -263,10 +297,10 @@ public class MyPushMessageReceiver extends FrontiaPushMessageReceiver {
 
         Utils.logStringCache = logText;
 
-        Intent intent = new Intent();
-        intent.setClass(context.getApplicationContext(), MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.getApplicationContext().startActivity(intent);
+//        Intent intent = new Intent();
+//        intent.setClass(context.getApplicationContext(), MainActivity.class);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//        context.getApplicationContext().startActivity(intent);
     }
 
 }

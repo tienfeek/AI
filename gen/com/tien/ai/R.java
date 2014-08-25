@@ -8,43 +8,465 @@
 package com.tien.ai;
 
 public final class R {
+    public static final class anim {
+        public static final int cycles_animation=0x7f040000;
+    }
+    public static final class animator {
+        public static final int fragment_slide_left_enter=0x7f050000;
+        public static final int fragment_slide_left_exit=0x7f050001;
+        public static final int fragment_slide_right_enter=0x7f050002;
+        public static final int fragment_slide_right_exit=0x7f050003;
+    }
+    public static final class array {
+        public static final int pic_item=0x7f0a0000;
+    }
     public static final class attr {
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int border_color=0x7f010001;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int border_width=0x7f010000;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int buttonColor=0x7f010003;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int cornerRadius=0x7f010006;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int header=0x7f010007;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int headerHeight=0x7f010008;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int headerVisibleHeight=0x7f010009;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int shadowColor=0x7f010004;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int shadowEnabled=0x7f010002;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int shadowHeight=0x7f010005;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>reveal</code></td><td>0</td><td></td></tr>
+<tr><td><code>dismiss</code></td><td>1</td><td></td></tr>
+<tr><td><code>choice</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int swipeActionLeft=0x7f010012;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>reveal</code></td><td>0</td><td></td></tr>
+<tr><td><code>dismiss</code></td><td>1</td><td></td></tr>
+<tr><td><code>choice</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int swipeActionRight=0x7f010013;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int swipeAnimationTime=0x7f01000b;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int swipeBackView=0x7f010010;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int swipeCloseAllItemsWhenMoveList=0x7f01000e;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int swipeDrawableChecked=0x7f010014;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int swipeDrawableUnchecked=0x7f010015;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int swipeFrontView=0x7f01000f;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>both</code></td><td>1</td><td></td></tr>
+<tr><td><code>right</code></td><td>2</td><td></td></tr>
+<tr><td><code>left</code></td><td>3</td><td></td></tr>
+</table>
+         */
+        public static final int swipeMode=0x7f010011;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int swipeOffsetLeft=0x7f01000c;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int swipeOffsetRight=0x7f01000d;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int swipeOpenOnLongPress=0x7f01000a;
+    }
+    public static final class color {
+        public static final int fbutton_color_alizarin=0x7f0b0010;
+        public static final int fbutton_color_amethyst=0x7f0b0008;
+        public static final int fbutton_color_asbestos=0x7f0b0015;
+        public static final int fbutton_color_belize_hole=0x7f0b0007;
+        public static final int fbutton_color_carrot=0x7f0b000e;
+        public static final int fbutton_color_clouds=0x7f0b0012;
+        public static final int fbutton_color_concrete=0x7f0b0014;
+        public static final int fbutton_color_emerald=0x7f0b0004;
+        public static final int fbutton_color_green_sea=0x7f0b0003;
+        public static final int fbutton_color_midnight_blue=0x7f0b000b;
+        public static final int fbutton_color_nephritis=0x7f0b0005;
+        public static final int fbutton_color_orange=0x7f0b000d;
+        public static final int fbutton_color_peter_river=0x7f0b0006;
+        public static final int fbutton_color_pomegranate=0x7f0b0011;
+        public static final int fbutton_color_pumpkin=0x7f0b000f;
+        public static final int fbutton_color_silver=0x7f0b0013;
+        public static final int fbutton_color_sun_flower=0x7f0b000c;
+        public static final int fbutton_color_transparent=0x7f0b0016;
+        public static final int fbutton_color_turquoise=0x7f0b0002;
+        public static final int fbutton_color_wet_asphalt=0x7f0b000a;
+        public static final int fbutton_color_wisteria=0x7f0b0009;
+        public static final int fbutton_default_color=0x7f0b0000;
+        public static final int fbutton_default_shadow_color=0x7f0b0001;
+        public static final int sk_text_black_wihte_selector=0x7f0b0017;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
+
+         Customize dimensions originally defined in res/values/dimens.xml (such as
+         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
+    
+ Default screen margins, per the Android Design guidelines. 
 
          Example customization of dimensions originally defined in res/values/dimens.xml
          (such as screen margins) for screens with more than 820dp of available width. This
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f070000;
+        public static final int activity_vertical_margin=0x7f070001;
+        public static final int fbutton_default_conner_radius=0x7f070002;
+        public static final int fbutton_default_padding_bottom=0x7f070006;
+        public static final int fbutton_default_padding_left=0x7f070003;
+        public static final int fbutton_default_padding_right=0x7f070004;
+        public static final int fbutton_default_padding_top=0x7f070005;
+        public static final int fbutton_default_shadow_height=0x7f070007;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int ai_arrow=0x7f020000;
+        public static final int ai_btn_normal=0x7f02003c;
+        public static final int ai_btn_press=0x7f02003d;
+        public static final int ai_btn_selector=0x7f020001;
+        public static final int ai_in=0x7f020002;
+        public static final int ai_out=0x7f020003;
+        public static final int avatar_default=0x7f020004;
+        public static final int badge=0x7f020005;
+        public static final int bg_main_bottom_bg=0x7f020006;
+        public static final int bg_main_tab_pressed=0x7f020007;
+        public static final int bottom_bg_shape=0x7f020008;
+        public static final int camera_crop_height=0x7f020009;
+        public static final int camera_crop_width=0x7f02000a;
+        public static final int crop_btn_selector=0x7f02000b;
+        public static final int crop_image_rotate_left=0x7f02000c;
+        public static final int crop_image_rotate_right=0x7f02000d;
+        public static final int dice=0x7f02000e;
+        public static final int dice_1=0x7f02000f;
+        public static final int dice_2=0x7f020010;
+        public static final int dice_3=0x7f020011;
+        public static final int dice_4=0x7f020012;
+        public static final int dice_5=0x7f020013;
+        public static final int dice_6=0x7f020014;
+        public static final int dice_action_1=0x7f020015;
+        public static final int dice_action_2=0x7f020016;
+        public static final int dice_action_3=0x7f020017;
+        public static final int dice_action_4=0x7f020018;
+        public static final int edittext_bg=0x7f020019;
+        public static final int game=0x7f02001a;
+        public static final int hugh=0x7f02001b;
+        public static final int ic_launcher=0x7f02001c;
+        public static final int indicator_autocrop=0x7f02001d;
+        public static final int jsb=0x7f02001e;
+        public static final int jsb_1=0x7f02001f;
+        public static final int jsb_2=0x7f020020;
+        public static final int jsb_3=0x7f020021;
+        public static final int land_left_bg=0x7f020022;
+        public static final int login_btn_normal=0x7f02003a;
+        public static final int login_btn_press=0x7f02003b;
+        public static final int login_btn_selector=0x7f020023;
+        public static final int new_yellow=0x7f020024;
+        public static final int photo_modify=0x7f020025;
+        public static final int pic_turnleft_n=0x7f020026;
+        public static final int pic_turnleft_p=0x7f020027;
+        public static final int pic_turnright_n=0x7f020028;
+        public static final int pic_turnright_p=0x7f020029;
+        public static final int rkgk_compliance_lose_1=0x7f02002a;
+        public static final int rkgk_compliance_lose_2=0x7f02002b;
+        public static final int rkgk_compliance_lose_3=0x7f02002c;
+        public static final int rkgk_compliance_win_1=0x7f02002d;
+        public static final int rkgk_compliance_win_2=0x7f02002e;
+        public static final int rkgk_compliance_win_3=0x7f02002f;
+        public static final int rkgk_matching_vs_icon=0x7f020030;
+        public static final int scrollview_header=0x7f020031;
+        public static final int sk_diolag_border_line=0x7f020032;
+        public static final int sk_loading_inner=0x7f020033;
+        public static final int sk_loading_outer=0x7f020034;
+        public static final int sk_right_arrow=0x7f020035;
+        public static final int sk_search_icon=0x7f020036;
+        public static final int suggest_input_bg_shape=0x7f020037;
+        public static final int wa_logo=0x7f020038;
+        public static final int wihte_red_btn_normal=0x7f02003f;
+        public static final int wihte_red_btn_press=0x7f02003e;
+        public static final int wihte_red_btn_selector=0x7f020039;
     }
     public static final class id {
-        public static final int action_settings=0x7f080003;
-        public static final int ai_listview=0x7f080001;
-        public static final int ai_tv=0x7f080002;
-        public static final int container=0x7f080000;
+        public static final int action_settings=0x7f0c005c;
+        public static final int add_btn=0x7f0c004f;
+        public static final int add_friend_btn=0x7f0c002d;
+        public static final int add_friend_from_contact_tv=0x7f0c000f;
+        public static final int add_friend_rl=0x7f0c000e;
+        public static final int ai_btn=0x7f0c0008;
+        public static final int ai_count=0x7f0c0047;
+        public static final int ai_iv=0x7f0c001c;
+        public static final int ai_listview=0x7f0c0010;
+        public static final int ai_time_tv=0x7f0c001d;
+        public static final int ai_tv=0x7f0c0029;
+        public static final int avatar_iv=0x7f0c002b;
+        public static final int avator_iv=0x7f0c0043;
+        public static final int avator_rl=0x7f0c0042;
+        public static final int back=0x7f0c0011;
+        public static final int back_btn=0x7f0c000b;
+        public static final int both=0x7f0c0001;
+        public static final int bulletin=0x7f0c004d;
+        public static final int bulletin_layout=0x7f0c004c;
+        public static final int button_group=0x7f0c0051;
+        public static final int cancel_btn=0x7f0c0036;
+        public static final int choice=0x7f0c0006;
+        public static final int close_btn=0x7f0c0033;
+        public static final int commit_btn=0x7f0c0053;
+        public static final int contact_btn=0x7f0c0009;
+        public static final int contacts_lv=0x7f0c0023;
+        public static final int container=0x7f0c0007;
+        public static final int container_sv=0x7f0c0041;
+        public static final int content=0x7f0c0054;
+        public static final int content_rl=0x7f0c0019;
+        public static final int content_tv=0x7f0c0057;
+        public static final int cycles_iv=0x7f0c005a;
+        public static final int del_btn=0x7f0c0018;
+        public static final int detail_btn=0x7f0c0017;
+        public static final int dice_iv=0x7f0c005b;
+        public static final int discard=0x7f0c0025;
+        public static final int dismiss=0x7f0c0005;
+        public static final int empty=0x7f0c0013;
+        public static final int frist_ll=0x7f0c0031;
+        public static final int front=0x7f0c0012;
+        public static final int game_iv=0x7f0c001b;
+        public static final int image=0x7f0c0024;
+        public static final int invite_btn=0x7f0c0022;
+        public static final int left=0x7f0c0003;
+        public static final int leftRotate=0x7f0c0026;
+        public static final int loading_inner_iv=0x7f0c003a;
+        public static final int loading_msg_tv=0x7f0c003b;
+        public static final int loading_outer_iv=0x7f0c0039;
+        public static final int loading_pb=0x7f0c0014;
+        public static final int login_btn=0x7f0c003e;
+        public static final int me_btn=0x7f0c000a;
+        public static final int me_iv=0x7f0c002e;
+        public static final int modify_btn=0x7f0c0040;
+        public static final int mood_et=0x7f0c0049;
+        public static final int mood_tv=0x7f0c0048;
+        public static final int name=0x7f0c001a;
+        public static final int nickname_et=0x7f0c0046;
+        public static final int nickname_ll=0x7f0c0044;
+        public static final int nickname_tv=0x7f0c0045;
+        public static final int none=0x7f0c0000;
+        public static final int opponent_iv=0x7f0c0030;
+        public static final int password_et=0x7f0c003d;
+        public static final int percent_tv=0x7f0c0058;
+        public static final int phone_et=0x7f0c003c;
+        public static final int play_again_btn=0x7f0c0038;
+        public static final int play_btn=0x7f0c0034;
+        public static final int progress_pb=0x7f0c001f;
+        public static final int progress_rl=0x7f0c001e;
+        public static final int progress_tip_tv=0x7f0c0020;
+        public static final int refersh_btn=0x7f0c0016;
+        public static final int regster_btn=0x7f0c003f;
+        public static final int remind_iv=0x7f0c002c;
+        public static final int repassword_et=0x7f0c004b;
+        public static final int replay_btn=0x7f0c0032;
+        public static final int reveal=0x7f0c0004;
+        public static final int right=0x7f0c0002;
+        public static final int rightRotate=0x7f0c0027;
+        public static final int save=0x7f0c0028;
+        public static final int search_et=0x7f0c000c;
+        public static final int search_iv=0x7f0c000d;
+        public static final int search_result_lv=0x7f0c004e;
+        public static final int second_ll=0x7f0c0037;
+        public static final int section=0x7f0c002a;
+        public static final int send_btn=0x7f0c0035;
+        public static final int star_nickname=0x7f0c0021;
+        public static final int suggest_btn=0x7f0c004a;
+        public static final int suggest_et=0x7f0c0055;
+        public static final int suggest_list_btn=0x7f0c0052;
+        public static final int suggest_lv=0x7f0c0056;
+        public static final int tip_tv=0x7f0c0015;
+        public static final int title_rl=0x7f0c0050;
+        public static final int upgrade_btn=0x7f0c0059;
+        public static final int vs_iv=0x7f0c002f;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int ai_list_view=0x7f030001;
-        public static final int ai_listview_item=0x7f030002;
-        public static final int fragment_main=0x7f030003;
+        public static final int add_friend_layout=0x7f030001;
+        public static final int ai_list_view=0x7f030002;
+        public static final int ai_listview_item=0x7f030003;
+        public static final int contacts_list_item=0x7f030004;
+        public static final int contacts_view=0x7f030005;
+        public static final int cropimage=0x7f030006;
+        public static final int empty_view=0x7f030007;
+        public static final int fragment_main=0x7f030008;
+        public static final int friends_list_item=0x7f030009;
+        public static final int friends_view=0x7f03000a;
+        public static final int game_finish_popupwindow=0x7f03000b;
+        public static final int game_popupwindow=0x7f03000c;
+        public static final int game_recevier_popupwindow=0x7f03000d;
+        public static final int loading=0x7f03000e;
+        public static final int login_layout=0x7f03000f;
+        public static final int me_view=0x7f030010;
+        public static final int receiver_window=0x7f030011;
+        public static final int regster_layout=0x7f030012;
+        public static final int rkgk_bulletin_window=0x7f030013;
+        public static final int search_friend_view=0x7f030014;
+        public static final int search_result_listview_item=0x7f030015;
+        public static final int splash_layout=0x7f030016;
+        public static final int suggest_layout=0x7f030017;
+        public static final int suggest_list_layout=0x7f030018;
+        public static final int suggest_listview_item=0x7f030019;
+        public static final int upgrade_layout=0x7f03001a;
+        public static final int user_layout=0x7f03001b;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int main=0x7f0d0000;
+    }
+    public static final class raw {
+        public static final int wa=0x7f060000;
+        public static final int wa2=0x7f060001;
+        public static final int yo=0x7f060002;
+        public static final int yoyo=0x7f060003;
     }
     public static final class string {
-        public static final int action_settings=0x7f050002;
-        public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050001;
+        public static final int action_settings=0x7f080001;
+        public static final int app_name=0x7f080000;
+        public static final int hello_world=0x7f080002;
+        public static final int no_network_error=0x7f080004;
+        public static final int timeout_error=0x7f080003;
+        public static final int upgrade=0x7f080006;
+        public static final int upgrade_title=0x7f080005;
     }
     public static final class style {
+        public static final int AlertDialogCustom=0x7f090002;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -65,11 +487,444 @@ public final class R {
         res/values-v11/styles.xml on API 14+ devices.
     
  API 14 theme customizations can go here. 
+
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
+
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    
+ API 11 theme customizations can go here. 
+
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    
+ API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f090000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
+ Application theme. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f090001;
+        public static final int NoTitleDialog=0x7f090003;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a CircleImageView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CircleImageView_border_color com.tien.ai:border_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_border_width com.tien.ai:border_width}</code></td><td></td></tr>
+           </table>
+           @see #CircleImageView_border_color
+           @see #CircleImageView_border_width
+         */
+        public static final int[] CircleImageView = {
+            0x7f010000, 0x7f010001
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#border_color}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.tien.ai:border_color
+        */
+        public static final int CircleImageView_border_color = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#border_width}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.tien.ai:border_width
+        */
+        public static final int CircleImageView_border_width = 0;
+        /** Attributes that can be used with a FButton.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #FButton_buttonColor com.tien.ai:buttonColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #FButton_cornerRadius com.tien.ai:cornerRadius}</code></td><td></td></tr>
+           <tr><td><code>{@link #FButton_shadowColor com.tien.ai:shadowColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #FButton_shadowEnabled com.tien.ai:shadowEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #FButton_shadowHeight com.tien.ai:shadowHeight}</code></td><td></td></tr>
+           </table>
+           @see #FButton_buttonColor
+           @see #FButton_cornerRadius
+           @see #FButton_shadowColor
+           @see #FButton_shadowEnabled
+           @see #FButton_shadowHeight
+         */
+        public static final int[] FButton = {
+            0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005,
+            0x7f010006
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#buttonColor}
+          attribute's value can be found in the {@link #FButton} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.tien.ai:buttonColor
+        */
+        public static final int FButton_buttonColor = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#cornerRadius}
+          attribute's value can be found in the {@link #FButton} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.tien.ai:cornerRadius
+        */
+        public static final int FButton_cornerRadius = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#shadowColor}
+          attribute's value can be found in the {@link #FButton} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.tien.ai:shadowColor
+        */
+        public static final int FButton_shadowColor = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#shadowEnabled}
+          attribute's value can be found in the {@link #FButton} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.tien.ai:shadowEnabled
+        */
+        public static final int FButton_shadowEnabled = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#shadowHeight}
+          attribute's value can be found in the {@link #FButton} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.tien.ai:shadowHeight
+        */
+        public static final int FButton_shadowHeight = 3;
+        /** Attributes that can be used with a PullScrollView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #PullScrollView_header com.tien.ai:header}</code></td><td></td></tr>
+           <tr><td><code>{@link #PullScrollView_headerHeight com.tien.ai:headerHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #PullScrollView_headerVisibleHeight com.tien.ai:headerVisibleHeight}</code></td><td></td></tr>
+           </table>
+           @see #PullScrollView_header
+           @see #PullScrollView_headerHeight
+           @see #PullScrollView_headerVisibleHeight
+         */
+        public static final int[] PullScrollView = {
+            0x7f010007, 0x7f010008, 0x7f010009
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#header}
+          attribute's value can be found in the {@link #PullScrollView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.tien.ai:header
+        */
+        public static final int PullScrollView_header = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#headerHeight}
+          attribute's value can be found in the {@link #PullScrollView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.tien.ai:headerHeight
+        */
+        public static final int PullScrollView_headerHeight = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#headerVisibleHeight}
+          attribute's value can be found in the {@link #PullScrollView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.tien.ai:headerVisibleHeight
+        */
+        public static final int PullScrollView_headerVisibleHeight = 2;
+        /** Attributes that can be used with a SwipeListView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SwipeListView_swipeActionLeft com.tien.ai:swipeActionLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeActionRight com.tien.ai:swipeActionRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeAnimationTime com.tien.ai:swipeAnimationTime}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeBackView com.tien.ai:swipeBackView}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeCloseAllItemsWhenMoveList com.tien.ai:swipeCloseAllItemsWhenMoveList}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeDrawableChecked com.tien.ai:swipeDrawableChecked}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeDrawableUnchecked com.tien.ai:swipeDrawableUnchecked}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeFrontView com.tien.ai:swipeFrontView}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeMode com.tien.ai:swipeMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeOffsetLeft com.tien.ai:swipeOffsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeOffsetRight com.tien.ai:swipeOffsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwipeListView_swipeOpenOnLongPress com.tien.ai:swipeOpenOnLongPress}</code></td><td></td></tr>
+           </table>
+           @see #SwipeListView_swipeActionLeft
+           @see #SwipeListView_swipeActionRight
+           @see #SwipeListView_swipeAnimationTime
+           @see #SwipeListView_swipeBackView
+           @see #SwipeListView_swipeCloseAllItemsWhenMoveList
+           @see #SwipeListView_swipeDrawableChecked
+           @see #SwipeListView_swipeDrawableUnchecked
+           @see #SwipeListView_swipeFrontView
+           @see #SwipeListView_swipeMode
+           @see #SwipeListView_swipeOffsetLeft
+           @see #SwipeListView_swipeOffsetRight
+           @see #SwipeListView_swipeOpenOnLongPress
+         */
+        public static final int[] SwipeListView = {
+            0x7f01000a, 0x7f01000b, 0x7f01000c, 0x7f01000d,
+            0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011,
+            0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#swipeActionLeft}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>reveal</code></td><td>0</td><td></td></tr>
+<tr><td><code>dismiss</code></td><td>1</td><td></td></tr>
+<tr><td><code>choice</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name com.tien.ai:swipeActionLeft
+        */
+        public static final int SwipeListView_swipeActionLeft = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#swipeActionRight}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>reveal</code></td><td>0</td><td></td></tr>
+<tr><td><code>dismiss</code></td><td>1</td><td></td></tr>
+<tr><td><code>choice</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name com.tien.ai:swipeActionRight
+        */
+        public static final int SwipeListView_swipeActionRight = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#swipeAnimationTime}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.tien.ai:swipeAnimationTime
+        */
+        public static final int SwipeListView_swipeAnimationTime = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#swipeBackView}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.tien.ai:swipeBackView
+        */
+        public static final int SwipeListView_swipeBackView = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#swipeCloseAllItemsWhenMoveList}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.tien.ai:swipeCloseAllItemsWhenMoveList
+        */
+        public static final int SwipeListView_swipeCloseAllItemsWhenMoveList = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#swipeDrawableChecked}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.tien.ai:swipeDrawableChecked
+        */
+        public static final int SwipeListView_swipeDrawableChecked = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#swipeDrawableUnchecked}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.tien.ai:swipeDrawableUnchecked
+        */
+        public static final int SwipeListView_swipeDrawableUnchecked = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#swipeFrontView}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.tien.ai:swipeFrontView
+        */
+        public static final int SwipeListView_swipeFrontView = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#swipeMode}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>both</code></td><td>1</td><td></td></tr>
+<tr><td><code>right</code></td><td>2</td><td></td></tr>
+<tr><td><code>left</code></td><td>3</td><td></td></tr>
+</table>
+          @attr name com.tien.ai:swipeMode
+        */
+        public static final int SwipeListView_swipeMode = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#swipeOffsetLeft}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.tien.ai:swipeOffsetLeft
+        */
+        public static final int SwipeListView_swipeOffsetLeft = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#swipeOffsetRight}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.tien.ai:swipeOffsetRight
+        */
+        public static final int SwipeListView_swipeOffsetRight = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.tien.ai.R.attr#swipeOpenOnLongPress}
+          attribute's value can be found in the {@link #SwipeListView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.tien.ai:swipeOpenOnLongPress
+        */
+        public static final int SwipeListView_swipeOpenOnLongPress = 0;
+    };
 }

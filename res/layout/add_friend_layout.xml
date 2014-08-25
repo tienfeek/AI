@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff3e0"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:background="#ff5722" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dip"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="添加朋友"
+                android:textColor="#ffffffff"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dip"
+                android:background="@null"
+                android:text="返回"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginTop="10dip"
+            android:gravity="center_vertical"
+            android:text="搜索号码添加朋友"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip" >
+
+            <EditText
+                android:id="@+id/search_et"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:background="#e6ee9c"
+                android:hint="昵称/手机号"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="15dip"
+                android:singleLine="true"
+                android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/search_iv"
+                android:layout_width="25dip"
+                android:layout_height="25dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dip"
+                android:src="@drawable/sk_search_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/add_friend_rl"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_marginTop="20dip"
+            android:background="#dce775" >
+
+            <TextView
+                android:id="@+id/add_friend_from_contact_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="50dip"
+                android:layout_marginLeft="15dip"
+                android:gravity="center_vertical"
+                android:text="添加手机联系人"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dip"
+                android:src="@drawable/sk_right_arrow" />
+        </RelativeLayout>
+    </LinearLayout>
+	<FrameLayout android:id="@+id/container"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"></FrameLayout>
+</FrameLayout>

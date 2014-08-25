@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <ImageView android:id="@+id/avatar_iv"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_margin="10dip"
+        android:visibility="gone"/>
+	<TextView android:id="@+id/nickname_tv"
+	    android:layout_width="wrap_content"
+	    android:layout_height="50dip"
+	    android:gravity="center_vertical"
+	    android:layout_marginLeft="6dip"
+	    android:textColor="#000000"
+	    android:textSize="20sp"/>
+	
+	<Button android:id="@+id/add_btn"
+	    android:layout_width="100dip"
+	    android:layout_height="50dip"
+	    android:gravity="center"
+	    android:background="@null"
+	    android:layout_alignParentRight="true"
+	    android:text="添加"
+	    android:textColor="#607d8b"/>
+</RelativeLayout>

@@ -55,22 +55,16 @@ public class Utils {
     public static boolean hasBind(Context context) {
         SharedPreferences sp = PreferenceManager
                 .getDefaultSharedPreferences(context);
-        String flag = sp.getString("bind_flag", "");
-        if ("ok".equalsIgnoreCase(flag)) {
-            return true;
-        }
-        return false;
+        Boolean flag = sp.getBoolean("bind_flag", false);
+        return flag;
     }
 
-    public static void setBind(Context context, boolean flag) {
-        String flagStr = "not";
-        if (flag) {
-            flagStr = "ok";
-        }
-        SharedPreferences sp = PreferenceManager
-                .getDefaultSharedPreferences(context);
+    public static void setBind(Context context, boolean flag, String channelId, String uid) {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
         Editor editor = sp.edit();
-        editor.putString("bind_flag", flagStr);
+        editor.putBoolean("bind_flag", flag);
+        editor.putString("channel_id", channelId);
+        editor.putString("bd_uid", uid);
         editor.commit();
     }
 

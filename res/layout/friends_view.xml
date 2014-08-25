@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fbe9e7"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="#ff5722" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="好友"
+            android:textColor="#ffffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/add_friend_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dip"
+            android:layout_marginRight="10dip"
+            android:background="@null"
+            android:text="添加朋友"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/contacts_lv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#fbe9e7"
+            android:cacheColorHint="#00000000"
+            android:divider="#e0e0e0"
+            android:dividerHeight="1dp"
+            android:listSelector="@android:color/transparent" >
+        </ListView>
+
+        <RelativeLayout  android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ProgressBar android:id="@+id/loading_pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="?android:attr/progressBarStyle"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/tip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="没有可显示的数据"
+            android:textColor="#b0bec5"
+            android:textSize="18sp" />
+        <Button android:id="@+id/refersh_btn"
+            android:layout_width="80dip"
+            android:layout_height="30dip"
+            android:layout_marginTop="5dip"
+            android:layout_below="@+id/tip_tv"
+            android:layout_centerHorizontal="true"
+            android:background="#e0e0e0"
+            android:text="刷新"
+            android:textSize="15sp"
+            android:textColor="#bdbdbd"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

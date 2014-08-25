@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="#ff5722" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="我的资料"
+            android:textColor="#ffffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/modify_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:minHeight="36dip"
+            android:minWidth="60dip"
+            android:background="@null"
+            android:text="编辑"
+            android:textColor="@android:color/white"
+             />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/container_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fbe9e7" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+				
+                <RelativeLayout android:id="@+id/avator_rl"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginTop="20dip">
+                <com.tien.volley.toolbox.NetworkImageView
+                    android:id="@+id/avator_iv"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/avatar_default" />
+                <ImageView android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:src="@drawable/photo_modify"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="2dip"
+                    android:layout_marginBottom="2dip"/>
+				</RelativeLayout>
+                <LinearLayout
+                    android:id="@+id/nickname_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dip"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_marginTop="30dip"
+                    android:layout_toRightOf="@+id/avator_rl"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="昵称:"
+                        android:textColor="#746254"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/nickname_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dip"
+                        android:padding="3dip"
+                        android:textColor="#746254"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/nickname_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dip"
+                        android:layout_marginLeft="3dip"
+                        android:padding="6dip"
+                        android:background="@drawable/edittext_bg"
+                        android:gravity="center_vertical"
+                        android:textColor="#746254"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nickname_ll"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_toRightOf="@+id/avator_rl" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="哇:"
+                        android:textColor="#746254"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/ai_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="3dip"
+                        android:layout_marginLeft="3dip"
+                        android:textColor="#746254"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:layout_marginTop="20dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:text="心情:"
+                    android:textColor="#746254"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/mood_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="100dip"
+                    android:layout_marginLeft="3dip"
+                    android:padding="3dip"
+                    android:text="这个家伙很懒，什么都没留下！"
+                    android:textColor="#746254"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/mood_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:layout_marginLeft="3dip"
+                    android:padding="6dip"
+                    android:gravity="top"
+                    android:background="@drawable/edittext_bg"
+                    android:textColor="#746254"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <Button android:id="@+id/suggest_btn"
+                android:layout_width="120dip"
+                android:layout_height="36dip"
+                android:layout_margin="40dip"
+                android:layout_gravity="center_horizontal"
+                android:text="请帮帮我们"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/ai_btn_selector"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

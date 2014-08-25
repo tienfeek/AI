@@ -1,8 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="70dip" >
 
-</LinearLayout>
+    <RelativeLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="70dip"
+        android:tag="back" >
+
+        <Button
+            android:id="@+id/detail_btn"
+            android:layout_width="80dip"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/del_btn"
+            android:background="#ffea00"
+            android:text="资料"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/del_btn"
+            android:layout_width="80dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#ff5722"
+            android:text="删除"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/front"
+        android:layout_width="match_parent"
+        android:layout_height="70dip"
+        android:background="#fbe9e7"
+        android:tag="front" >
+
+        <RelativeLayout
+            android:id="@+id/content_rl"
+            android:layout_width="match_parent"
+            android:layout_height="70dip"
+            android:tag="front" >
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="70dip"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dip"
+                android:gravity="center_vertical"
+                android:textColor="#9e9e9e"
+                android:textSize="22sp" />
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true">
+             <ImageView android:id="@+id/game_iv"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:layout_marginTop="7dip"
+                android:layout_marginRight="15dip"
+                android:src="@drawable/game"
+                android:visibility="gone"/>
+            <ImageView android:id="@+id/ai_iv"
+                android:layout_width="42dip"
+                android:layout_height="42dip"
+                android:layout_marginTop="6dip"
+                android:layout_marginRight="15dip"
+                android:src="@drawable/ai_out"/>
+			</LinearLayout>
+            <TextView
+                android:id="@+id/ai_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="15dip"
+                android:layout_marginBottom="4dip"
+                android:gravity="center_vertical"
+                android:textColor="#ff9800"
+                android:textSize="12dip"
+                android:textStyle="bold|italic" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/progress_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:id="@+id/progress_pb"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/progress_tip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:text="正在发送..."
+                android:textSize="18dip" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>
